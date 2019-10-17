@@ -1,6 +1,6 @@
 {% set name = "unicodedata2" %}
-{% set version = "12.0.0" %}
-{% set sha256 = "d2eccba34ea5e1b4b3549391e1a10254577e7583f862a300e8f5665757564f77" %}
+{% set version = "12.1.0" %}
+{% set sha256 = "c86829393d1fba1b306e26fa46852c9841a7342ca9131909e5e44df7af959946" %}
 
 package:
   name: {{ name|lower }}
