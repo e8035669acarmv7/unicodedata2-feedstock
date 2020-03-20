@@ -1,6 +1,6 @@
 {% set name = "unicodedata2" %}
-{% set version = "12.1.0" %}
-{% set sha256 = "c86829393d1fba1b306e26fa46852c9841a7342ca9131909e5e44df7af959946" %}
+{% set version = "13.0.0.post2" %}
+{% set sha256 = "a83e504fb0e8ed4757194e61c3f7b69fb3c914856057bea968d0950f80f947fa" %}
 
 package:
   name: {{ name|lower }}
@@ -33,8 +33,8 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'unicodedata backport/updates to python 3 and python 2.'
-  description: 'unicodedata backport/updates to python 3 and python 2.'
+  summary: unicodedata backport/updates to python 3 and python 2.
+  description: unicodedata backport/updates to python 3 and python 2.
   dev_url: https://github.com/mikekap/unicodedata2
 
 extra:
