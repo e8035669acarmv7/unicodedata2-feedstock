@@ -10,7 +10,7 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
-    - pypy-support.patch  # [python_impl == "pypy"]
+    - pypy-support.patch
 
 build:
   number: 3
