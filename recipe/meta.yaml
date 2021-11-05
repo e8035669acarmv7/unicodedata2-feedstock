@@ -7,19 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - pypy-support.patch
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 3
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - {{ compiler('c') }}
   host:
     - python
+    - pip
     - setuptools
   run:
     - python
@@ -40,3 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - CJ-Wright
+    - dopplershift
