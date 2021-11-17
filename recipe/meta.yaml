@@ -11,9 +11,10 @@ source:
   sha256: {{ sha256 }}
   patches:
     - pypy-support.patch
+    - fix-py310-build.patch
 
 build:
-  number: 3
+  number: 4
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
