@@ -1,6 +1,6 @@
 {% set name = "unicodedata2" %}
-{% set version = "13.0.0.post2" %}
-{% set sha256 = "a83e504fb0e8ed4757194e61c3f7b69fb3c914856057bea968d0950f80f947fa" %}
+{% set version = "14.0.0" %}
+{% set sha256 = "41f7df0043f4450e84203d907a56cdd2a0a0541a9eebbaba48576b01e0b61684" %}
 
 package:
   name: {{ name|lower }}
@@ -9,13 +9,10 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - pypy-support.patch
-    - fix-py310-build.patch
 
 build:
-  number: 4
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
