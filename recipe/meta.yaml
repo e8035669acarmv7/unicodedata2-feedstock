@@ -1,6 +1,6 @@
 {% set name = "unicodedata2" %}
-{% set version = "14.0.0" %}
-{% set sha256 = "41f7df0043f4450e84203d907a56cdd2a0a0541a9eebbaba48576b01e0b61684" %}
+{% set version = "15.0.0" %}
+{% set sha256 = "ed6c683f7b0a58cd11824b440d8ad24b22904ab3f63fc851bbcd7e518fa68f2d" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
     - fix-python-311.patch
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
